@@ -38,7 +38,7 @@ Data format
 See docs/data_format.md for preparing your .npy datasets and CSV splits.
 To test the pipeline locally, generate dummy data:
 
-python examples/create_dummy_data.py --out_dir examples/create_dummy_data.py
+python examples/create_dummy_data.py --out_dir examples/dummy_data
 
 
 Training

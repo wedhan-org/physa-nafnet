@@ -34,7 +34,8 @@ def main():
         base_name = f.replace(f"_{args.target}.npy", "")
 
         pred_path = os.path.join(args.pred_dir, f)
-        # Using a generalized convention. Modify logic based on actual ref naming.
+        # Using a generalized convention. 
+        # Modify this logic according to the actual reference naming convention.
         ref_path = os.path.join(args.ref_dir, f"{base_name}_acquired_stir.npy")
 
         if not os.path.exists(ref_path):

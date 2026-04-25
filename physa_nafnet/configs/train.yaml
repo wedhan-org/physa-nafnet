@@ -1,0 +1,45 @@
+data:
+  root: "./data/train_npy"
+  split_csv: "./data/split_info.csv"
+  image_size: 512
+
+training:
+  epochs: 200
+  batch_size: 1
+  num_workers: 4
+  learning_rate: 0.0002
+  min_lr: 0.00002
+
+model:
+  width: 32
+  encoder_blocks: [1, 1, 1, 28]
+  decoder_blocks: [1, 1, 1, 1]
+  dropout_rate: 0.1
+
+bloch:
+  tr_t1: 646.0
+  te_t1: 9.3
+  tr_t2: 3204.0
+  te_t2: 93.0
+  tr_stir: 4000.0
+  te_stir: 45.0
+  ti_stir: 160.0
+  learnable: false
+
+loss_weights:
+  cycle: 1.0
+  gan: 0.05
+  vgg: 0.1
+  style: 100.0
+  bloch: 0.5
+  freq: 0.1
+  sobel: 2.0
+  roi: 5.0
+  ms_ssim: 1.0
+  lpips: 5.0
+  decomposition: 1.0
+  exclusion: 0.1
+  dual_guide: 20.0
+
+output:
+  save_dir: "./runs/physa_nafnet"

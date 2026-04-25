@@ -1,6 +1,6 @@
 data:
-  root: "./data/train_npy"
-  split_csv: "./data/split_info.csv"
+  root: "./examples/dummy_data"
+  split_csv: "./examples/dummy_data/dummy_split.csv"
   image_size: 512
 
 training:
